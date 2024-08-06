@@ -11,15 +11,14 @@ public class Main {
 
         LibraryService libraryABC = new LibraryService();
 
-        List<Item> listOfItems = new ArrayList<>();
-//        List<Book> listOfBooks = new ArrayList<>();
+        List<Item> libraryItems;
 
-        libraryABC.addItemsToLibrary();
-        listOfItems = libraryABC.getItemsInLibrary();
+        libraryABC.addRandomItemsToLibrary();
+        libraryItems = libraryABC.getItemsInLibrary();
 
         libraryABC.addItemToLibrary(new Hardcopy("The Secret", "AB5", "ANkit", 1999, "ButterPaper", "19X10", "C4 - 5"));
 
-        for(Item item : listOfItems) {
+        for(Item item : libraryItems) {
             if (item instanceof Hardcopy book) {
                 item.displayDetails();
             }
