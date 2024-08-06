@@ -1,32 +1,34 @@
 package model;
 
-public abstract class Book extends Item{
+public class Book extends Item{
 
-    private String name;
-    private String author_name;
-    private int pub_year;
+    private String authorName;
+    private int publishYear;
 
-    public String getName() {
-        return name;
+    public Book(String name, String uniqueID, String authorName, int publishYear) {
+        super(name, uniqueID);
+        this.authorName = authorName;
+        this.publishYear = publishYear;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public String getAuthor_name() {
-        return author_name;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 
-    public void setAuthor_name(String author_name) {
-        this.author_name = author_name;
+    public int getPublishYear() {
+        return publishYear;
     }
 
-    public int getPub_year() {
-        return pub_year;
+    public void setPublishYear(int publishYear) {
+        this.publishYear = publishYear;
     }
-
-    public void setPub_year(int pub_year) {
-        this.pub_year = pub_year;
+    @Override
+    public void displayDetails(){
+      System.out.println("Book: " + getName() + " by " + getAuthorName() + ", Publication Date: " + getPublishYear());
     }
 }

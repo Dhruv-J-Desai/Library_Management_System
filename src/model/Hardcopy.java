@@ -13,6 +13,6 @@ public class Hardcopy extends Book{
 
     @Override
     public void displayDetails(){
-        System.out.println("Hardcopy: " + getTitle() + " by " + getAuthor_name() + ", ISBN: " + isbn);
+        System.out.println("Hardcopy: " + getTitle() + " by " + getAuthorName() + ", ISBN: " + isbn);
     }
 }

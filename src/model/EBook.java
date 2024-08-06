@@ -13,6 +13,6 @@ public class EBook extends Book{
 
     @Override
     public void displayDetails(){
-        System.out.println("EBook: " + getTitle() + " by " + getAuthor_name() + ", ebook_id: " + ebook_id);
+        System.out.println("EBook: " + getTitle() + " by " + getAuthorName() + ", ebook_id: " + ebook_id);
     }
 }
