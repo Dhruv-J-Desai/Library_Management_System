@@ -2,33 +2,29 @@ import model.Book;
 import model.Hardcopy;
 import model.Item;
 import model.Laptop;
+import services.LibraryService;
 
 import java.util.ArrayList;
 import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        LibraryService libraryABC = new LibraryService();
+
         List<Item> listOfItems = new ArrayList<>();
-        List<Book> listOfBooks = new ArrayList<>();
+//        List<Book> listOfBooks = new ArrayList<>();
 
-        Item bookTesting = new Book("Lost", "AB1", "Steve Jobs", 1999);
-        Book bookTesting2  = new Book("Lost", "AB1", "Steve Jobs", 1999);
+        libraryABC.addItemsToLibrary();
+        listOfItems = libraryABC.getItemsInLibrary();
 
-        listOfItems.add(bookTesting);
-        listOfItems.add(bookTesting2);
+        libraryABC.addItemToLibrary(new Hardcopy("The Secret", "AB5", "ANkit", 1999, "ButterPaper", "19X10", "C4 - 5"));
 
-//        listOfBooks.add(bookTesting2);
-//        listOfBooks.add(bookTesting); // Makes sense why it won't work
+        for(Item item : listOfItems) {
+            if (item instanceof Hardcopy book) {
+                item.displayDetails();
+            }
 
-        Item laptopTesting = new Laptop("Maaverick", "AB2", "12345678");
-        listOfItems.add(laptopTesting);
-
-        Item hardCopyTesting = new Hardcopy("Found", "AB3", "Elon musk", 2003, "Hard Cover", "10X8", "C4 - 4");
-        listOfItems.add(hardCopyTesting);
-
-        for(Item item : listOfItems){
-            item.displayDetails();
         }
-
     }
+
 }
