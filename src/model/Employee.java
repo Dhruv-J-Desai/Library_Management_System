@@ -13,6 +13,7 @@ public class Employee extends Library {
     private String address;
     private String email;
 
+
     public Employee(String libraryName, String address, long phoneNo, int libraryId,
                     String emailId, String name, String emp_id, int contact_no,
                     String address1, String email) {
@@ -64,4 +65,8 @@ public class Employee extends Library {
         this.email = email;
     }
 
+    public void performDuty(){
+        System.out.println("Performing there duties" + "Name: " + getName() + " EmpId: " + getEmp_id() + " Email: " + getEmail());
+    }
 }
+
