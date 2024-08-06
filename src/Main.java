@@ -1,7 +1,4 @@
-import model.Book;
-import model.Hardcopy;
-import model.Item;
-import model.Laptop;
+import model.*;
 import services.LibraryService;
 
 import java.util.ArrayList;
@@ -19,9 +16,9 @@ public class Main {
         libraryABC.addItemToLibrary(new Hardcopy("The Secret", "AB5", "ANkit", 1999, "ButterPaper", "19X10", "C4 - 5"));
 
         for(Item item : libraryItems) {
-            if (item instanceof Hardcopy book) {
+//            if (item instanceof Hardcopy book) {
                 item.displayDetails();
-            }
+//            }
 
         }
     }

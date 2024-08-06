@@ -38,7 +38,7 @@ public class Hardcopy extends Book{
 
     @Override
     public void displayDetails(){
-        System.out.println("Book: " + super.getName() +
+        System.out.println(this.getClass().getName() + ": " + super.getName() +
                 " by " + this.getAuthorName() +
                 ", Publication Date: " + this.getPublishYear() +
                 ", with cover of Type: " + this.getBindingType() +
