@@ -6,6 +6,7 @@ public abstract class Item {
     private String name;
     private String uniqueID;
 
+
     public Item(String name, String uniqueID) {
         this.name = name;
         this.uniqueID = uniqueID;
@@ -27,5 +28,7 @@ public abstract class Item {
         this.name = name;
     }
 
-    public abstract void displayDetails(); //Abstract method to display details of the item.
+    public void displayDetails(){
+        System.out.println("Name of the Item: " + this.getName() + " and Unique ID: " + this.getUniqueID());
+    } //Abstract method to display details of the item.
 }

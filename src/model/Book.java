@@ -27,8 +27,9 @@ public class Book extends Item{
     public void setPublishYear(int publishYear) {
         this.publishYear = publishYear;
     }
+
     @Override
     public void displayDetails(){
-      System.out.println("Book: " + getName() + " by " + getAuthorName() + ", Publication Date: " + getPublishYear());
+      System.out.println("Book: " + super.getName() + " by " + this.getAuthorName() + ", Publication Date: " + this.getPublishYear());
     }
 }
