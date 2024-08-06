@@ -59,7 +59,7 @@ public class Employee {
     }
 
     public void performDuty(){
-        System.out.println("Performing there duties" + "Name: " + this.getName() + " EmpId: " + this.getEmpID() + " Email: " + this.getEmail());
+        System.out.println("Performing thir duties" + "Name: " + this.getName() + " EmpId: " + this.getEmpID() + " Email: " + this.getEmail());
     }
 }
 

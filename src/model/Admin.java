@@ -13,7 +13,7 @@ public class Admin extends Employee{
 
     @Override
     public void performDuty(){
-
+        System.out.println("Admin performing Admin work.");
     }
 
 }
