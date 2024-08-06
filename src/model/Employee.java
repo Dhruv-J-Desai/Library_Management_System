@@ -2,7 +2,7 @@ package model;
 
 import services.Library;
 
-public class Employee extends Library {
+public class Employee {
     private String name;
     private String empID;
     private String contactNo;
@@ -10,8 +10,7 @@ public class Employee extends Library {
     private String email;
 
 
-    public Employee(String libraryName, String address, long phoneNo, int libraryId, String emailId, String name, String empID, String contactNo, String email, String address1) {
-        super(libraryName, address, phoneNo, libraryId, emailId);
+    public Employee(String name, String empID, String contactNo, String email, String address1) {
         this.name = name;
         this.empID = empID;
         this.contactNo = contactNo;
@@ -60,7 +59,7 @@ public class Employee extends Library {
     }
 
     public void performDuty(){
-        System.out.println("Performing there duties" + "Name: " + getName() + " EmpId: " + getEmpID() + " Email: " + getEmail());
+        System.out.println("Performing there duties" + "Name: " + this.getName() + " EmpId: " + this.getEmpID() + " Email: " + this.getEmail());
     }
 }
 
