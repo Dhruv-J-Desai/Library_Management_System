@@ -2,27 +2,21 @@ package model;
 
 import services.Library;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 public class Employee extends Library {
     private String name;
-    private String emp_id;
-    private int contact_no;
+    private String empID;
+    private String contactNo;
     private String address;
     private String email;
 
 
-    public Employee(String libraryName, String address, long phoneNo, int libraryId,
-                    String emailId, String name, String emp_id, int contact_no,
-                    String address1, String email) {
+    public Employee(String libraryName, String address, long phoneNo, int libraryId, String emailId, String name, String empID, String contactNo, String email, String address1) {
         super(libraryName, address, phoneNo, libraryId, emailId);
         this.name = name;
-        this.emp_id = emp_id;
-        this.contact_no = contact_no;
-        this.address = address1;
+        this.empID = empID;
+        this.contactNo = contactNo;
         this.email = email;
+        this.address = address1;
     }
 
     public String getName() {
@@ -33,20 +27,20 @@ public class Employee extends Library {
         this.name = name;
     }
 
-    public String getEmp_id() {
-        return emp_id;
+    public String getEmpID() {
+        return empID;
     }
 
-    public void setEmp_id(String emp_id) {
-        this.emp_id = emp_id;
+    public void setEmpID(String empID) {
+        this.empID = empID;
     }
 
-    public int getContact_no() {
-        return contact_no;
+    public String getContactNo() {
+        return contactNo;
     }
 
-    public void setContact_no(int contact_no) {
-        this.contact_no = contact_no;
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
     }
 
     public String getAddress() {
@@ -66,7 +60,7 @@ public class Employee extends Library {
     }
 
     public void performDuty(){
-        System.out.println("Performing there duties" + "Name: " + getName() + " EmpId: " + getEmp_id() + " Email: " + getEmail());
+        System.out.println("Performing there duties" + "Name: " + getName() + " EmpId: " + getEmpID() + " Email: " + getEmail());
     }
 }
 

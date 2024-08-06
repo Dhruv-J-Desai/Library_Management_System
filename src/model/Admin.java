@@ -5,9 +5,11 @@ public class Admin extends Employee{
     private String duty;
 
 
-    public Admin(String name, String emp_id, int contact_no, String address1, String email, String role, String duty) {
-        super(name, emp_id, contact_no, address1, email);
+    public Admin(String libraryName, String address, long phoneNo, int libraryId, String emailId, String name, String empID, String contactNo, String email, String address1, String role, String duty) {
+        super(libraryName, address, phoneNo, libraryId, emailId, name, empID, contactNo, email, address1);
         this.role = role;
         this.duty = duty;
     }
+
+
 }
