@@ -3,12 +3,12 @@ package model;
 public class Member {
     private int memberId;
     private String memberName;
-    private long contactNo;
+    private String contactNo;
     private int age;
     private String address;
     private String email;
 
-    public Member(int memberId, String memberName, long contactNo, int age, String address, String email) {
+    public Member(int memberId, String memberName, String contactNo, int age, String address, String email) {
         this.memberId = memberId;
         this.memberName = memberName;
         this.contactNo = contactNo;
@@ -33,11 +33,11 @@ public class Member {
         this.memberName = memberName;
     }
 
-    public long getContactNo() {
+    public String getContactNo() {
         return contactNo;
     }
 
-    public void setContactNo(long contactNo) {
+    public void setContactNo(String contactNo) {
         this.contactNo = contactNo;
     }
 
@@ -65,6 +65,6 @@ public class Member {
         this.email = email;
     }
     public void showInfo(){
-        System.out.println("Member Id: " + getMemberId() + " Member name: " + getMemberName() + " Email: " + getEmail());
+        System.out.println("Member Id: " + this.getMemberId() + " Member name: " + this.getMemberName() + " Email: " + this.getEmail());
     }
 }
